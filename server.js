@@ -1,6 +1,8 @@
 const dotenv = require('dotenv').config()
 const notion = require("./notion")
 
+const port = process.env.PORT
+
 const { getStudents, addPage, getStudentImg } = require("./notion")
 const { Lesson, getStudentsData, Student } = require("./public/javascripts/students")
 const { getStudentImage } = require("./public/javascripts/students")
@@ -132,6 +134,6 @@ app.post("/invoices", async (req, res) => {
 })
 
 console.log("PORT =", process.env.PORT);
-app.listen(process.env.PORT || 3000, "0.0.0.0" , () => {
-    console.log("Server running");
+app.listen(port, "0.0.0.0", function () {
+  console.log("Server running");
 });
