@@ -1,0 +1,31 @@
+<form id="dr-form" action="/invoices" method="post">
+    <label for="student">
+        Choose the students
+    </label>
+    <select name="student" id="student">
+        <%if( data.students!==null && data.students!==undefined ){%>
+            <%for(let student in data.students){%>
+                <option value="<%=student%>">
+                    <%=student%>
+                </option>
+                <%}%>
+                    <%}%>
+    </select>
+
+    <label for="month">
+        Choose the months
+    </label>
+    <select name="month" id="month">
+        <option value="<%=data.invoiceMonth%>" selected>
+            <%=data.invoiceMonth%>
+        </option>
+        <%for(let month of data.months){%>
+            <option value="<%=month%>">
+                <%=month%>
+            </option>
+            <%}%>
+
+    </select>
+
+    <button class="btn" id="get-invoices">Get the invoice</button>
+</form>

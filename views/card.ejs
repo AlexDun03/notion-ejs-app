@@ -1,0 +1,24 @@
+<div class="card">
+    <form action="/new-lesson">
+        <button type="submit">
+            <div class="name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <p class="text">
+                    <%= student.name%>
+                </p>
+            </div>
+            <div class="date">
+                <label for="date">Date:</label>
+                <input type="number" id="date" name="date">
+                <span><button id="minus"><i class="fa-solid fa-left"></i></button></span>
+                <p class="text">
+                    <%= student.date%>
+                </p>
+                <span><button id="plus"><i class="fa-solid fa-right"></i></button></span>
+            </div>
+        </button>
+    </form>
+</div>
+
+<!--<%-include("card")%>--!>    

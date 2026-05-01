@@ -1,0 +1,19 @@
+<form id="dr-form" action="/dailyroutine" method="post">
+
+    <button class="btn">Create new daily routines.</button>
+</form>
+<%if( response!==null && response!==undefined && response.length){%>
+    <%response.forEach(item=>{%>
+        <p>
+            <span>
+                <%=item.date%>
+            </span>
+            <span>
+                <%=item.name%>
+            </span>
+        </p>
+        <br>
+        <%})%>
+            <%}else{%>
+                <p>The daily routines for this week are already there.</p>
+                <%}%>

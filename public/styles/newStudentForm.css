@@ -1,0 +1,35 @@
+input {
+    display: block;
+}
+
+form#new-student-form {
+    justify-content: start;
+}
+
+form#new-student-form input {
+    display: block;
+}
+
+form#new-student-form label {
+    margin: .4rem 0;
+    width: 100%;
+    text-align: left;
+}
+
+form#new-student-form button {
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    margin: .5rem;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, .1);
+    transition: .3s;
+    cursor: pointer;
+}
+
+form#new-student-form button:hover {
+    transform: scale(1.1);
+}

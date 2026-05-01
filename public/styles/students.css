@@ -1,0 +1,35 @@
+.students-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    /* width: 95vw; */
+    justify-content: space-around;
+}
+
+
+.students {
+    border: 1px solid black;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 60vw;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, auto);
+    text-align: center;
+}
+
+.student-img {
+    width: auto;
+    height: 2rem;
+}
+
+img {
+    width: auto;
+    height: 2rem;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 25vw;
+}

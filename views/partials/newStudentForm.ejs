@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/newStudentForm.css">
+</head>
+
+<form id="new-student-form" action="/new-student" method="POST">
+    <label>Student's name</label>
+    <input required type="text" name="name" placeholder="name">
+    <label>Lesson's price</label>
+    <input required type="number" min="1" name="price" placeholder="price">
+    <label>Lesson's time</label>
+    <input required type="number" min="1" name="lessonTime" placeholder="lesson time" value="60">
+    <label>Image</label>
+    <input required type="text" name="img" placeholder="img">
+    <label>Subjects</label>
+    <input required type="text" name="subjects" placeholder="subject">
+    <label>Email</label>
+    <input required type="email" name="email" placeholder="email">
+
+    <button type="submit">
+        Add Student
+    </button>
+</form>

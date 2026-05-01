@@ -1,0 +1,33 @@
+<head>
+    <script defer src="/javascripts/buttons.js"></script>
+    <script src="https://kit.fontawesome.com/a33e899801.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <%if( students!==null && students!==undefined ){%>
+            <%for(let student in students){%>
+                <div class="card">
+                    <form action="/new-lesson" method="POST">
+                        <button type="submit">
+                            <img src="<%=students[student].img%>">
+                        </button>
+                        <input type="text" name="student" value="<%= students[student].name%>">
+                        <div class="date">
+                            <button type="button" class="<%= students[student].name%>" id="minus"
+                                onclick="decreaseDate(this)">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <input type="date" name="date" id="<%= students[student].name%>" class="date-input"
+                                value="">
+                            <button type="button" class="<%= students[student].name%>" id="plus"
+                                onclick="increaseDate(this)">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <%}%>
+                    <%}%>
+    </div>

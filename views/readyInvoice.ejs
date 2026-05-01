@@ -1,0 +1,67 @@
+<head>
+    <script defer src="/javascripts/copyText.js"></script>
+    <script src="https://kit.fontawesome.com/a33e899801.js" crossorigin="anonymous"></script>
+</head>
+<div class="inline">
+
+    <h1>Invoice</h1>
+    <span>
+
+        <a href="/invoices">
+            <i class="fa-solid fa-angles-left"></i>
+        </a>
+    </span>
+</div>
+<h2>
+    Email: <span id="email">
+        <%=email%>
+    </span>
+</h2>
+<h3>Korepetycje</h3>
+<p class="center">\/ Click to copy \/</p>
+<div id="invoice" onclick="copyFn()">
+    <%if(err){%>
+        <h2>
+            <%=err%>
+        </h2>
+        <%}else{%>
+            Szanowna Pani,<br>
+            Przesyłam rozliczenie z korepetycji. <br>
+            _______________________________________<br>
+            Miesiąc:<br>
+            <%=month%><br>
+                <br>
+                Uczeń:<br>
+                <%=student%><br>
+                    <br>
+                    Daty lekcji:<br>
+                    <%for(let date of dates){%>
+                        <%=date%><br>
+                            <%}%>
+                                <br>
+                                Liczba lekcji:<br>
+                                <%=lessonsNumber%><br>
+                                    <br>
+                                    Długoś lekcji:<br>
+                                    <%=lessonTime%> min<br>
+                                        <br>
+                                        Cena jednej lekcji:<br>
+                                        <%=lessonPrice%> zł<br>
+                                            <br>
+                                            Kwota do zapłaty:<br>
+                                            <%=total%>zł<br>
+                                                <br>
+                                                Dane do przelewu:
+                                                <br>
+                                                Numer rachunku odbiorcy: 58102050400000690201909191<br>
+                                                Nazwa odbiorcy: ALEKSANDER DUNAJEWSKI<br>
+                                                Nazwa banku: Powszechna Kasa Oszczędności Bank Polski SA<br>
+                                                Kod BIC (Swift) banku: BPKOPLPW<br>
+                                                __________________________________________<br>
+                                                Dziękuję za wspólpracę.<br>
+
+                                                Z wyrazami szacunku,
+                                                Aleksander Dunajewski.
+                                                <%}%>
+</div>
+<footer></footer>
